@@ -1,0 +1,10 @@
+--- external/elfutils/bionic-fixup/AndroidFixup.h	2014-03-01 16:27:25.742830632 +0000
++++ external/elfutils/bionic-fixup/AndroidFixup.h	2014-03-01 16:27:37.162757524 +0000
+@@ -80,6 +80,6 @@
+ }
+ 
+ /* forward declarations */
+-char * dgettext (const char * domainname, const char * msgid);
++#define dgettext(Domain,Message) (Message)
+ 
+ #endif /* ANDROID_FIXUP_H */
