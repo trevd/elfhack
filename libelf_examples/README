@@ -5,6 +5,7 @@ Extended Code Sampled derived from the examples outlined in
 libelf-by-example.pdf
 
 prog1 = get-elf-test.c 
+prog2 = print-elf-header.c 
 
 Android.mk
 ==========
@@ -13,6 +14,7 @@ Directory should be placed at external/elfhack/libelf_examples
 
 NOTES:
 
+If using the elfutils from OmniRom 4.4 Branch
 external/elfutils/bionic-fixup/AndroidFixup.h needs to be patched
 as the declaration of dgettext is incorrect resulting in undefined 
 references when attempting to compile an executable that uses libelf.a
@@ -21,7 +23,6 @@ libelf then needs to be recompiled.
 From the aosp source tree ( $ANDROID_TOP ) 
 patch --strip 0 < external/elfhack/libelf_examples/libelf.patch
 make libelf 
-
 
 Makefile
 ========
